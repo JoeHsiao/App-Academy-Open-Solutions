@@ -1,0 +1,177 @@
+Request
+- Method:
+- URL:
+- Headers:
+- Body:
+
+Response
+- Status code:
+- Headers:
+- Body: 
+
+
+Ask for a page that doesn't exist
+- Method: GET
+- URL: /xxx
+- Headers: none
+- Body: none
+
+Response
+- Status code: 404
+- Headers: Content-Type: text/html
+- Body: Page not found
+---
+Ask for the product list page
+Request
+- Method: GET
+- URL: /products
+- Headers: none
+- Body: none
+
+Response
+- Status code: 200
+- Headers: Content-Type: text/html
+- Body: A html page of list of products.
+---
+Ask for the product deatil page
+Request
+- Method: GET
+- URL: /products/1
+- Headers: none
+- Body: none
+
+Response
+- Status code: 200
+- Headers: Content-Type: text/html
+- Body: An html of the details of the specific product
+---
+Ask for the create new product page
+Request
+- Method: GET
+- URL: /products/new
+- Headers: none
+- Body: none
+
+Response
+- Status code: 200
+- Headers: Content-Type: text.html
+- Body: A create new product page with a form in it
+---
+Submit a new product
+Request
+- Method: POST
+- URL: /products
+- Headers: Content-Type: x-www-form-urlencoded
+- Body: key-values pairs of data in the form
+
+Response
+- Status code: 302
+- Headers: Location: /products/2
+- Body: none
+---
+Ask for the edit product page
+Request
+- Method: GET
+- URL: /products/2/edit
+- Headers: none
+- Body: none
+
+Response
+- Status code: 200
+- Headers: Content-Type: text/html
+- Body: An html page with a form that allows the user to edit the product
+--- Submit an edit for an existing product
+Request
+- Method: POST
+- URL: /products/1/
+- Headers: Content-Type: x-www-form-urlencoded
+- Body: data names and values in the form
+
+Response
+- Status code: 302
+- Headers: Location: /products/1
+- Body: none
+---
+Sumbit a delete for an existing product
+Request
+- Method: DELETE
+- URL: /products/2/delete
+- Headers: none
+- Body: none
+
+Response
+- Status code: 302
+- Headers: Location: /products
+- Body: none
+---
+Submit a new review for a product
+Request
+- Method: POST
+- URL: /products/1/reviews
+- Headers: Content-Type: x-www-form-urlencoded
+- Body: data names and values in a form
+
+Response
+- Status code: 302
+- Headers: Location: /products/1
+- Body: none
+---
+Ask for the edit review page for a product
+Request
+- Method: GET
+- URL: /reviews/1/edit
+- Headers: none
+- Body: none
+
+Response
+- Status code: 200
+- Headers: Content-Type: text/html
+- Body: A review edit form in an html
+---
+Submit edit for an existing review
+Request
+- Method: POST
+- URL: /reviews/1
+- Headers: Content-Type: x-www-form-urlencoded
+- Body: data names and values from a form
+
+Response
+- Status code: 302
+- Headers: /products/1
+- Body: none
+---
+Submit a delete for an existing review
+Request
+- Method: DELETE
+- URL: /reviews/1/delete
+- Headers: none
+- Body: none
+
+Response
+- Status code: 302
+- Headers: /products/1
+- Body: none
+---
+Ask for all products in a particular category by a tag of the category
+Request
+- Method: GET
+- URL: /categories/clothing/products
+- Headers: none
+- Body:none
+
+Response
+- Status code: 200
+- Headers: Content-Type: text/html
+- Body: html of all products in the clothing category
+---
+Ask for the besting selling product
+Request
+- Method: GET
+- URL: /products/best-selling
+- Headers: none
+- Body: none
+
+Response
+- Status code: 200
+- Headers: Content-Type: text/html
+- Body: Detail page of the best selling product.
