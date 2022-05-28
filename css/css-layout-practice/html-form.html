@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <title>Learning the forms</title>
+    <link rel="stylesheet" href="layout.css">
+</head>
+
+<body>
+    <form action="/form-handling-url" method="post">
+        <fieldset class="container">
+            <legend>Add user</legend>
+            <div class="addUser">
+                <div class="verCenter">
+                    <label for="firstName">First name:</label>
+                    <input type="text" id="firstName" name="first_name">
+                </div>
+                <div class="verCenter">
+                    <label for="lastName">Last name:</label>
+                    <input type="text" id="lastName" name="last_name">
+                </div>
+                <div class="verCenter">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" type="email_address">
+                </div>
+                <div class="horiGroup">
+                    <div class="verCenter">
+                        <label for="status">Status:</label>
+                        <select id="status" name="status">
+                            <option value="single">Single</option>
+                            <option value="married">Married</option>
+                        </select>
+                    </div>
+                    <div class="verCenter">
+                        <label for="date">Date:</label>
+                        <input type="date" id="date" name="date">
+                    </div>
+                </div>
+                <div>
+                    <label>Choose your favorite language:</label>
+                    <div id="favLang">
+                        <input type="radio" id="html" name="favLang" value="html" checked>
+                        <label for="">HTML</label>
+                        <input type="radio" id="css" name="favLang" value="css">
+                        <label for="">CSS</label>
+                        <input type="radio" id="js" name="favLang" value="js">
+                        <label for="">JS</label>
+                    </div>
+                </div>
+                <div class="verCenter">
+                    <label for="comments" id="commentLabel">Comments:</label>
+                    <textarea id="comments" name="comments"></textarea>
+                </div>
+                <div class="horiGroup">
+                    <div class="horiGroup">
+                        <input type="checkbox" id="signUp" name="signUp">
+                        <label for="signUp">sign up for news</label>
+                    </div>
+                    <div class="horiGroup">
+                        <input type="checkbox" id="agree" name="agree">
+                        <label for="agree">agree to terms</label>
+                    </div>
+                </div>
+                <button type="submit" id="submit">Submit</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>
